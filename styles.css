@@ -9,6 +9,10 @@
   --title:Bebas neue;
   --text: Montserrat;
 }
+html{
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
 *{
   margin:0;
   padding:0;
@@ -22,16 +26,39 @@ body{
   justify-content: center;
   align-items: center;
 }
+.conteiner{
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  
+}
+section{
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1){
+  justify-content: flex-start;
+}
 header{
-  width:100%;
+  width:100vw;
+  
 }
 header nav{
   background-color:var(--tom1);
-  padding:1rem;
+  padding:1rem 2rem;
   display:flex;
   flex-direction: row;
   justify-content:space-between;
   align-items:center;
+  width: 100%;
 }
 .logo{
   font-family:var(--title);
@@ -66,11 +93,11 @@ header nav{
   padding:1rem;
   width: 95vw;
   height: calc(90vh - 3rem);
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 2rem;
   background:linear-gradient(135deg, var(--tom2), var(--tom3));
   border-radius: 1.5rem;
-  box-shadow: 0 0 1rem 0.5rem rgba(0,0,0,0.3);
+  box-shadow: 0 0 1rem 0.5rem rgba(0,0,0,0.2);
 }
 .explain{
   display:flex;
@@ -115,6 +142,7 @@ header nav{
 }
 .donate iframe{
   width: 100%;
+  border-radius: 1rem;
 }
 .donate{
   display: flex;
@@ -151,4 +179,96 @@ header nav{
   font-size:1.1rem;
   color:var(--tom0);
 }
+
+/* termino do css da home comeco do css do formulario */
+
+#reader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+  height: calc(90vh - 3rem);
+  margin: 4rem auto;
+  background:linear-gradient(135deg, var(--tom2), var(--tom3));
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1rem 0.5rem rgba(0,0,0,0.2);
+  padding: 3rem;
+}
+.text_reader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.text_reader h1{
+  font-family:var(--title);
+  font-size:9.5rem;
+  margin: 1rem;
+  background: linear-gradient(135deg, var(--tom4), var(--tom0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 9.8rem;
+}
+.text_reader p{
+  font-family:var(--text);
+  font-size:1.8rem;
+  color:var(--tom0);
+  padding:0 0 0 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+#reader form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+#reader form textarea{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0 1rem 0 0
+}
+#reader form input, #reader form button, #reader form select{
+  width: 100%;
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  font-family:var(--text);
+  border-radius: 0.5rem;
+  border:none;
+}
+#reader form div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#reader form div h1{
+  font-family:var(--title);
+  font-size:3rem;
+  color:var(--tom0);
+}
+.button_start{
+  background-color: var(--tom4);
+  color:var(--tom0);
+}
+
+
+
+
+
+
+
+
 
